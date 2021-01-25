@@ -10,31 +10,38 @@
     <section id="roulettesection">
       <select id="missionselect">
         <option value="RANDOM">Random Mission</option>
-        <option value="TSS">The Showstopper</option>
-        <option value="HH">Holiday Hoarders</option>
-        <option value="WOT">World of Tomorrow</option>
-        <option value="ICON">The Icon</option>
-        <option value="LS">Landslide</option>
-        <option value="AGC">A Gilded Cage</option>
-        <option value="AHBOS">A House Built on Sand</option>
-        <option value="C27">Club 27</option>
-        <option value="FF">Freedom Fighters</option>
-        <option value="SI">Situs Inversus</option>
-        <option value="TS">The Source</option>
-        <option value="TA">The Author</option>
-        <option value="PZ">Patient Zero</option>
-        <option value="HSF">Hokkaido Snow Festival</option>
-        <option value="TFL">The Finish Line</option>
-        <option value="THS">Three-headed Serpent</option>
-        <option value="CAG">Chasing a Ghost</option>
-        <option value="AL">Another Life</option>
-        <option value="TAS">The Ark Society</option>
-        <option value="GH">Golden Handshake</option>
-        <option value="EOTS">Embrace of the Serpent</option>
-        <option value="IOG">Illusions of Grandeur</option>
-        <option value="TLR">The Last Resort</option>
-        <option value="AST">A Silver Tongue</option>
-        <option value="ABP">A Bitter Pill</option>
+        <option value="RANDOM1">Random Hitman 1</option>
+        <option value="RANDOM2">Random Hitman 2</option>
+        <option value="RANDOM3">Random Hitman 3</option>
+        <optgroup label="Hitman 2016">
+          <option value="TSS">The Showstopper</option>
+          <option value="HH">Holiday Hoarders</option>
+          <option value="WOT">World of Tomorrow</option>
+          <option value="ICON">The Icon</option>
+          <option value="LS">Landslide</option>
+          <option value="AGC">A Gilded Cage</option>
+          <option value="AHBOS">A House Built on Sand</option>
+          <option value="C27">Club 27</option>
+          <option value="FF">Freedom Fighters</option>
+          <option value="SI">Situs Inversus</option>
+          <option value="TS">The Source</option>
+          <option value="TA">The Author</option>
+          <option value="PZ">Patient Zero</option>
+          <option value="HSF">Hokkaido Snow Festival</option>
+        </optgroup>
+        <optgroup label="Hitman 2">
+          <option value="TFL">The Finish Line</option>
+          <option value="THS">Three-headed Serpent</option>
+          <option value="CAG">Chasing a Ghost</option>
+          <option value="AL">Another Life</option>
+          <option value="TAS">The Ark Society</option>
+          <option value="GH">Golden Handshake</option>
+          <option value="EOTS">Embrace of the Serpent</option>
+          <option value="IOG">Illusions of Grandeur</option>
+          <option value="TLR">The Last Resort</option>
+          <option value="AST">A Silver Tongue</option>
+          <option value="ABP">A Bitter Pill</option>
+        </optgroup>
       </select>
       <button type="button" class="nappi" onclick="button_MakeItGo()">
         Make it go
@@ -129,23 +136,78 @@
         </div>
       </section>
 
-      <p id="chosenmission"></p>
+      <h1 id="chosenmission"></h1>
       <section id="resultsection">
-        <p id="start"></p>
-        <p id="kill1"></p>
-        <p id="kill2"></p>
-        <p id="kill3"></p>
-        <p id="kill4"></p>
-        <p id="kill5"></p>
-        <p id="exit"></p>
+        <div class="resultsblock" id="start">
+          <div class="row row--start">
+            <img id="starticon" class="icon">
+            <div id="starttext" class="icontext"></div>
+          </div>
+        </div>
+        <div class="resultsblock killresult">
+          <h2 id="kill1" class="target redtext"></h2>
+          <div class="row row--weapon"> 
+            <img class="icon" id="kill1icon">
+            <div id="kill1text" class="icontext"></div>
+          </div>
+          <div class="row row--disguise">
+            <img class="icon" src="images/suit.png">
+            <div class="icontext" id="kill1disguise"></div>
+          </div>
+        </div>
+        <div class="resultsblock killresult">
+          <h2 id="kill2" class="target redtext"></h2>
+          <div class="row row--weapon"> 
+            <img class="icon" id="kill2icon">
+            <div id="kill2text" class="icontext"></div>
+          </div>
+          <div class="row row--disguise">
+            <img class="icon" src="images/suit.png">
+            <div class="icontext" id="kill2disguise"></div>
+          </div>
+        </div>
+        <div class="resultsblock killresult">
+          <h2 id="kill3" class="target redtext"></h2>
+          <div class="row row--weapon"> 
+            <img class="icon" id="kill3icon">
+            <div id="kill3text" class="icontext"></div>
+          </div>
+          <div class="row row--disguise">
+            <img class="icon" src="images/suit.png">
+            <div class="icontext" id="kill3disguise"></div>
+          </div>
+        </div>
+        <div class="resultsblock killresult">
+          <h2 id="kill4" class="target redtext"></h2>
+          <div class="row row--weapon"> 
+            <img class="icon" id="kill4icon">
+            <div id="kill4text" class="icontext"></div>
+          </div>
+          <div class="row row--disguise">
+            <img class="icon" src="images/suit.png">
+            <div class="icontext" id="kill4disguise"></div>
+          </div>
+        </div>
+        <div class="resultsblock killresult">
+          <h2 id="kill5" class="target redtext"></h2>
+          <div class="row row--weapon"> 
+            <img class="icon" id="kill5icon">
+            <div id="kill5text" class="icontext"></div>
+          </div>
+          <div class="row row--disguise">
+            <img class="icon" src="images/suit.png">
+            <div class="icontext" id="kill5disguise"></div>
+          </div>
+        </div>
+        <div class="resultsblock" id="exit"></div>
         <br />
-        <p id="extra1" class="extras"></p>
-        <p id="extra2" class="extras"></p>
-        <p id="extra3" class="extras"></p>
-        <p id="extra4" class="extras"></p>
-        <p id="extra5" class="extras"></p>
-        <p id="extra6" class="extras"></p>
-        <p id="info"></p>
+        <div class="resultsblock" id="extra1" class="extras"></div>
+        <div class="resultsblock" id="extra2" class="extras"></div>
+        <div class="resultsblock" id="extra3" class="extras"></div>
+        <div class="resultsblock" id="extra4" class="extras"></div>
+        <div class="resultsblock" id="extra5" class="extras"></div>
+        <div class="resultsblock" id="extra6" class="extras"></div>
+        <div class="resultsblock" id="info"></div>
       </section>
 
       <a id="themeswitch" href="#">Switch theme</a>

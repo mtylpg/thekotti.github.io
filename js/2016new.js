@@ -4,7 +4,7 @@ function createContainerObject() {
 
   var missionIndex = document.getElementById("missionselect");
   var mission_name = missionIndex.options[missionIndex.selectedIndex].value;
-  var randomMissionList = [
+  var hm1Missions = [
     showstopper,
     hh,
     wot,
@@ -17,7 +17,9 @@ function createContainerObject() {
     si,
     ts,
     ta,
-    pz,
+    pz
+  ]
+  var hm2Missions = [
     hsf,
     tfl,
     ths,
@@ -30,7 +32,9 @@ function createContainerObject() {
     tlr,
     ast,
     abp
-  ];
+  ]
+  var hm3Missions = [];
+  var randomMissionList = [...hm1Missions, ...hm2Missions, ...hm3Missions];
   //The Vector is missing due to way too many workarounds for dribbleondo to get that mission working properly.
 
   for (var prop in generic)
@@ -39,6 +43,15 @@ function createContainerObject() {
   if (mission_name === "RANDOM")
     var current_mission =
       randomMissionList[Math.floor(Math.random() * randomMissionList.length)];
+  else if (mission_name === "RANDOM1")
+    var current_mission =
+      hm1Missions[Math.floor(Math.random() * hm1Missions.length)];
+  else if (mission_name === "RANDOM2")
+    var current_mission =
+      hm2Missions[Math.floor(Math.random() *  hm2Missions.length)];
+  else if (mission_name === "RANDOM3")
+    var current_mission =
+      hm3Missions[Math.floor(Math.random() *  hm3Missions.length)];
   else var current_mission = mission_names_map[mission_name];
 
   for (var prop in current_mission)
@@ -101,8 +114,7 @@ function createWeaponList(container) {
 
   for (var kill_type in killTypesMap)
     if (document.getElementById(kill_type).checked)
-      kills = kills.concat(container[killTypesMap[kill_type]]);
-
+      kills = kills.concat(container[killTypesMap[kill_type]].map(weap => [weap, killTypeImages[kill_type]]));
   var no_weapons_selected = !(kills.length > 0);
   if (no_weapons_selected)
     for (var i = 0; i < 5; ++i) kills.push("No weapons selected!");
@@ -117,12 +129,13 @@ function createWeaponList(container) {
     mode == "MAIN" &&
     container.missionTitle === "Situs Inversus" &&
     !no_weapons_selected
-  )
-    kills[1] =
+  ){
+    kills[1][0] =
       container.sodersKills[
         Math.floor(Math.random() * container.sodersKills.length)
       ];
-
+    kills[1][1] = killTypeImages.generic;
+    } 
   return kills;
 }
 
@@ -139,7 +152,7 @@ function createDisguiseList(container, mission_information) {
   //copy the disguise list, add  " as " to every element, then shuffle it
   if (document.getElementById("disguise").checked)
     disguises = container.disguises.slice().map(function(e) {
-      return " as " + e;
+      return e;
     });
   else disguises = ["", "", "", "", ""];
 
@@ -186,8 +199,8 @@ function containerToResult(container) {
 //Makes text appear
 function writeEverything(result) {
   document.getElementById("chosenmission").innerHTML = result.missionTitle;
-  document.getElementById("start").innerHTML =
-    "<p class='bluetext'>Start</p>: " + result.entry;
+  document.getElementById("starticon").src = "images/entry.png";
+  document.getElementById("starttext").innerHTML = result.entry;
 
   var MAX_TARGETS = 5,
     MAX_EXTRAS = 6;
@@ -195,14 +208,17 @@ function writeEverything(result) {
   // Write to the HTML elements from the results object
   for (var i = 0; i < MAX_TARGETS; ++i) {
     // kills
-    if (i < result.targets.length)
-      document.getElementById("kill" + (i + 1)).innerHTML =
-        "<p class='redtext'>" +
-        result.targets[i] +
-        "</p>: " +
-        result.weapons[i] +
-        result.disguises[i];
-    else document.getElementById("kill" + (i + 1)).innerHTML = "";
+    if (i < result.targets.length){
+      // console.log(result);
+      document.getElementById("kill" + (i + 1)).parentElement.style = "display:block";
+      document.getElementById("kill" + (i + 1)).innerHTML = result.targets[i];
+      
+      document.getElementById("kill" + (i + 1) +"icon").src= result.weapons[i][1];
+      document.getElementById("kill" + (i + 1) +"text").innerHTML = result.weapons[i][0];
+      
+      document.getElementById("kill" + (i + 1) +"disguise").innerHTML = result.disguises[i];
+    }
+    else document.getElementById("kill" + (i + 1)).parentElement.style = "display:none;";
   }
   for (var i = 0; i < MAX_EXTRAS; ++i) {
     // extras
@@ -211,7 +227,7 @@ function writeEverything(result) {
     else document.getElementById("extra" + (i + 1)).innerHTML = "";
   }
   document.getElementById("exit").innerHTML =
-    "<p class='bluetext'>Exit</p>: " + result.exit;
+    "<hr/><div class='row row--exit'><img class='icon' src='images/exit.png'/><div class='icontext'>" + result.exit + "</div></div>";
 
   var modeIndex = document.getElementById("modeselect");
   var mode = modeIndex.options[modeIndex.selectedIndex].value;

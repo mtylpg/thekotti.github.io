@@ -1,10 +1,24 @@
 * {
-	font-family:sans-serif;
+	font-family: "Helvetica";
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: white;
 }
 
+body{
+	background-color: #00ff00;
+}
+
+.icon{
+	width: 24px;
+	/* display: flex; */
+    height: 24px;
+    top: 5px;
+    PADDING-RIGHT: 8PX;
+}
 #chosenmission {
-	font-size:18px;
-	font-weight: bold;
+	/* font-size:18px; */
+	/* font-weight: bold; */
 	color:#cc0000;
 }
 
@@ -25,6 +39,20 @@
 #resultsection p {
 	margin-top: 1px;
 	margin-bottom: 1px;
+}
+
+.resultsblock{
+	/* display: flex; */
+	margin-top: 10px;
+}
+
+.killresult{
+	display: none;
+}
+
+.row{
+	display: flex;
+	align-items: center;
 }
 
 #info {

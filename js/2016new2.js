@@ -1329,7 +1329,7 @@ var ast = {
   ]
 };
 
-  var abp = {
+var abp = {
   missionTitle: "A Bitter Pill",
   melee: [
     "Fiber Wire",
@@ -1384,6 +1384,151 @@ var ast = {
   ]
 };
 
+// Hitman 3
+
+var otw = {
+  missionTitle: "On Top of the World",
+  melee: [
+    "Cleaver",
+    "Fire Axe",
+    "Folding Knife",
+    "Iron",
+    "Kitchen Knife",
+    "Letter Opener",
+    "Ornate Scimitar",
+    "Scissors",
+    "Screwdriver"
+  ],
+  targetList: ["Carl Ingram", "Marcus Stuyvesant"],
+  contractTargets: [
+  ],
+  entry: ["Burj Al-Ghazali Exterior", "Atrium Lobby", "Meeting Room", "Art Installation", "Guard Room", "Penthouse"],
+  exit: ["Roof", "Elevator"],
+  disguises: [
+    "Ashen Suit",
+    "Art Crew",
+    "Event Security",
+    "Event Staff",
+    "Famous Chef",
+    "Helicopter Pilot",
+    "Ingram's Bodyguard",
+    "Kitchen Staff",
+    "Maintenance Staff",
+    "Penthouse Guard",
+    "Penthouse Staff",
+    "The Assassin"
+  ]
+};
+
+var df = {
+  missionTitle: "Death in the Family",
+  melee: [
+    "Bartoli Hunting Shotgun",
+    "Cleaver",
+    "Fire Poker",
+    "Folding Knife",
+    "Garden Fork",
+    "Hatchet",
+    "Kitchen Knife",
+    "Letter Opener",
+    "Saber",
+    "Scissors",
+    "Screwdriver",
+    "Shears",
+    "Unicorn Horn",
+    "Walking Cane"
+  ],
+  targetList: ["Alexa Christine Carlisle"],
+  contractTargets: [
+  ],
+  entry: ["Main Road", "Garden", "Staff Room", "Behind Mansion", "Library", "Zachary's Bedroom", "Main Road", "Behind Mansion II"],
+  exit: ["Hearse", "Motocycle"],
+  disguises: [
+    "Classic Cut Long Coat Suit",
+    "Bodyguard",
+    "Gardener",
+    "Lawyer",
+    "Mansion Guard",
+    "Mansion Staff",
+    "Photographer",
+    "Private Investigator",
+    "Undertaker"
+  ]
+};
+
+var ap = {
+  missionTitle: "Apex Predator",
+  melee: [
+    "Bartoli Hunting Shotgun",
+    "Cleaver",
+    "Fire Poker",
+    "Folding Knife",
+    "Garden Fork",
+    "Hatchet",
+    "Kitchen Knife",
+    "Letter Opener",
+    "Saber",
+    "Scissors",
+    "Screwdriver",
+    "Shears",
+    "Unicorn Horn",
+    "Walking Cane"
+  ],
+  targetList: ["Target 1", "Target 2", "Target 3", "Target 4", "Target 5"],
+  contractTargets: [
+  ],
+  entry: ["Bus Stop", "Garden", "Club Entrance", "Projection Bar", "Radio Tower", "Chill Out", "DJ Booth", "Biker Hangout"],
+  exit: ["Hearse", "Motocycle"],
+  disguises: [
+    "Classic Cut Long Coat Suit",
+    "Bodyguard",
+    "Gardener",
+    "Lawyer",
+    "Mansion Guard",
+    "Mansion Staff",
+    "Photographer",
+    "Private Investigator",
+    "Undertaker"
+  ]
+};
+
+var eoa = {
+  missionTitle: "End of an Era",
+  melee: [
+    "Bartoli Hunting Shotgun",
+    "Cleaver",
+    "Fire Poker",
+    "Folding Knife",
+    "Garden Fork",
+    "Hatchet",
+    "Kitchen Knife",
+    "Letter Opener",
+    "Saber",
+    "Scissors",
+    "Screwdriver",
+    "Shears",
+    "Unicorn Horn",
+    "Walking Cane"
+  ],
+  targetList: ["Hush", "Imogen Royce"],
+  contractTargets: [
+  ],
+  entry: ["Train Station", "River-side Walkway", "Restaurant Kitchen", "Facility Rooftop", "The Block", "Balcony", "DJ Booth", "Facility Locker Room"],
+  exit: ["Hearse", "Motocycle"],
+  disguises: [
+    "Classic Cut Long Coat Suit",
+    "Bodyguard",
+    "Gardener",
+    "Lawyer",
+    "Mansion Guard",
+    "Mansion Staff",
+    "Photographer",
+    "Private Investigator",
+    "Undertaker"
+  ]
+};
+
+
 var mission_names_map = {
   TSS: showstopper,
   HH: hh,
@@ -1409,7 +1554,11 @@ var mission_names_map = {
   IOG: iog,
   TLR: tlr,
   AST: ast,
-  ABP: abp
+  ABP: abp,
+  // HM3
+  OTW: otw,
+  DF: df,
+  AP: ap
 };
 
 var killTypesMap = {
@@ -1418,3 +1567,11 @@ var killTypesMap = {
   accident: "accidents",
   generic: "kills"
 };
+
+var killTypeImages = {
+  generic: "images/generic.png",
+  melee: "images/melee.png",
+  firearm: "images/gun.png",
+  accident: "images/explosion.png",
+  poison: "images/poison.png"
+}
