@@ -34,7 +34,8 @@ function createContainerObject() {
     abp
   ]
   var hm3Missions = [];
-  var randomMissionList = [...hm1Missions, ...hm2Missions, ...hm3Missions];
+  var randomMissionList = [...hm1Missions];
+  // var randomMissionList = [...hm1Missions, ...hm2Missions, ...hm3Missions];
   //The Vector is missing due to way too many workarounds for dribbleondo to get that mission working properly.
 
   for (var prop in generic)
@@ -227,7 +228,7 @@ function writeEverything(result) {
     else document.getElementById("extra" + (i + 1)).innerHTML = "";
   }
   document.getElementById("exit").innerHTML =
-    "<hr/><div class='row row--exit'><img class='icon' src='images/exit.png'/><div class='icontext'>" + result.exit + "</div></div>";
+    "<div class='row row--exit'><img class='icon' src='images/exit.png'/><div class='icontext'>" + result.exit + "</div></div>";
 
   var modeIndex = document.getElementById("modeselect");
   var mode = modeIndex.options[modeIndex.selectedIndex].value;

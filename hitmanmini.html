@@ -135,99 +135,99 @@
           >
         </div>
       </section>
-
-      <h1 id="chosenmission"></h1>
-      <section id="resultsection">
-        <div class="resultsblock" id="start">
-          <div class="row row--start">
-            <img id="starticon" class="icon">
-            <div id="starttext" class="icontext"></div>
-          </div>
-        </div>
-        <div class="resultsblock killresult">
-          <h2 id="kill1" class="target redtext"></h2>
-          <div class="row row--weapon"> 
-            <img class="icon" id="kill1icon">
-            <div id="kill1text" class="icontext"></div>
-          </div>
-          <div class="row row--disguise">
-            <img class="icon" src="images/suit.png">
-            <div class="icontext" id="kill1disguise"></div>
-          </div>
-        </div>
-        <div class="resultsblock killresult">
-          <h2 id="kill2" class="target redtext"></h2>
-          <div class="row row--weapon"> 
-            <img class="icon" id="kill2icon">
-            <div id="kill2text" class="icontext"></div>
-          </div>
-          <div class="row row--disguise">
-            <img class="icon" src="images/suit.png">
-            <div class="icontext" id="kill2disguise"></div>
-          </div>
-        </div>
-        <div class="resultsblock killresult">
-          <h2 id="kill3" class="target redtext"></h2>
-          <div class="row row--weapon"> 
-            <img class="icon" id="kill3icon">
-            <div id="kill3text" class="icontext"></div>
-          </div>
-          <div class="row row--disguise">
-            <img class="icon" src="images/suit.png">
-            <div class="icontext" id="kill3disguise"></div>
-          </div>
-        </div>
-        <div class="resultsblock killresult">
-          <h2 id="kill4" class="target redtext"></h2>
-          <div class="row row--weapon"> 
-            <img class="icon" id="kill4icon">
-            <div id="kill4text" class="icontext"></div>
-          </div>
-          <div class="row row--disguise">
-            <img class="icon" src="images/suit.png">
-            <div class="icontext" id="kill4disguise"></div>
-          </div>
-        </div>
-        <div class="resultsblock killresult">
-          <h2 id="kill5" class="target redtext"></h2>
-          <div class="row row--weapon"> 
-            <img class="icon" id="kill5icon">
-            <div id="kill5text" class="icontext"></div>
-          </div>
-          <div class="row row--disguise">
-            <img class="icon" src="images/suit.png">
-            <div class="icontext" id="kill5disguise"></div>
-          </div>
-        </div>
-        <div class="resultsblock" id="exit"></div>
-        <br />
-        <div class="resultsblock" id="extra1" class="extras"></div>
-        <div class="resultsblock" id="extra2" class="extras"></div>
-        <div class="resultsblock" id="extra3" class="extras"></div>
-        <div class="resultsblock" id="extra4" class="extras"></div>
-        <div class="resultsblock" id="extra5" class="extras"></div>
-        <div class="resultsblock" id="extra6" class="extras"></div>
-        <div class="resultsblock" id="info"></div>
-      </section>
-
-      <a id="themeswitch" href="#">Switch theme</a>
-
-      <script src="js/2016new.js"></script>
-      <script src="js/2016new2.js"></script>
-      <script>
-        document.getElementById("themeswitch").onclick = function() {
-          var theme = document.getElementById("theme_css");
-          if (theme.href.match("css/mini.css")) {
-            theme.href = "css/minidark.css";
-          } else if ((theme.href.match = "css/minidark.css")) {
-            theme.href = "css/mini.css";
-          }
-          var section = document.getElementById("filters");
-          var nappi = document.getElementById("filterbutton");
-          section.style.display = "block";
-          nappi.innerHTML = "Hide options";
-        };
-      </script>
     </section>
+
+    <section id="resultsection">
+      <h1 id="chosenmission"></h1>
+      <div class="resultsblock" id="start">
+        <div class="row row--start">
+          <img id="starticon" class="icon">
+          <div id="starttext" class="icontext"></div>
+        </div>
+      </div>
+      <div class="resultsblock killresult">
+        <h2 id="kill1" class="target redtext"></h2>
+        <div class="row row--weapon"> 
+          <img class="icon" id="kill1icon">
+          <div id="kill1text" class="icontext"></div>
+        </div>
+        <div class="row row--disguise">
+          <img class="icon" src="images/suit.png">
+          <div class="icontext" id="kill1disguise"></div>
+        </div>
+      </div>
+      <div class="resultsblock killresult">
+        <h2 id="kill2" class="target redtext"></h2>
+        <div class="row row--weapon"> 
+          <img class="icon" id="kill2icon">
+          <div id="kill2text" class="icontext"></div>
+        </div>
+        <div class="row row--disguise">
+          <img class="icon" src="images/suit.png">
+          <div class="icontext" id="kill2disguise"></div>
+        </div>
+      </div>
+      <div class="resultsblock killresult">
+        <h2 id="kill3" class="target redtext"></h2>
+        <div class="row row--weapon"> 
+          <img class="icon" id="kill3icon">
+          <div id="kill3text" class="icontext"></div>
+        </div>
+        <div class="row row--disguise">
+          <img class="icon" src="images/suit.png">
+          <div class="icontext" id="kill3disguise"></div>
+        </div>
+      </div>
+      <div class="resultsblock killresult">
+        <h2 id="kill4" class="target redtext"></h2>
+        <div class="row row--weapon"> 
+          <img class="icon" id="kill4icon">
+          <div id="kill4text" class="icontext"></div>
+        </div>
+        <div class="row row--disguise">
+          <img class="icon" src="images/suit.png">
+          <div class="icontext" id="kill4disguise"></div>
+        </div>
+      </div>
+      <div class="resultsblock killresult">
+        <h2 id="kill5" class="target redtext"></h2>
+        <div class="row row--weapon"> 
+          <img class="icon" id="kill5icon">
+          <div id="kill5text" class="icontext"></div>
+        </div>
+        <div class="row row--disguise">
+          <img class="icon" src="images/suit.png">
+          <div class="icontext" id="kill5disguise"></div>
+        </div>
+      </div>
+      <div class="resultsblock" id="exit"></div>
+      <br />
+      <div class="resultsblock" id="extra1" class="extras"></div>
+      <div class="resultsblock" id="extra2" class="extras"></div>
+      <div class="resultsblock" id="extra3" class="extras"></div>
+      <div class="resultsblock" id="extra4" class="extras"></div>
+      <div class="resultsblock" id="extra5" class="extras"></div>
+      <div class="resultsblock" id="extra6" class="extras"></div>
+      <div class="resultsblock" id="info"></div>
+    </section>
+
+    <a id="themeswitch" href="#">Switch theme</a>
+
+    <script src="js/2016new.js"></script>
+    <script src="js/2016new2.js"></script>
+    <script>
+      document.getElementById("themeswitch").onclick = function() {
+        var theme = document.getElementById("theme_css");
+        if (theme.href.match("css/mini.css")) {
+          theme.href = "css/minidark.css";
+        } else if ((theme.href.match = "css/minidark.css")) {
+          theme.href = "css/mini.css";
+        }
+        var section = document.getElementById("filters");
+        var nappi = document.getElementById("filterbutton");
+        section.style.display = "block";
+        nappi.innerHTML = "Hide options";
+      };
+    </script>
   </body>
 </html>

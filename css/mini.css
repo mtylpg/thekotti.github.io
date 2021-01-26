@@ -6,9 +6,15 @@
 }
 
 body{
-	background-color: #00ff00;
+	background-color: #000;
 }
 
+option{
+	color: #000;
+}
+button{
+	background: #000;
+}
 .icon{
 	width: 24px;
 	/* display: flex; */
@@ -29,10 +35,18 @@ body{
 	font-size:10px;
 }
 
+#roulettesection{
+	position: absolute;
+	width: 350px;
+	right:0;
+}
+
 #resultsection {
+	background-color: rgba(0,0,0,.5);
+	padding:24px;
 	line-height:1.2;
 	border: none;
-	padding: 0;
+	width: 320px;
 	margin: 0;
 }
 
@@ -53,6 +67,12 @@ body{
 .row{
 	display: flex;
 	align-items: center;
+}
+
+.row--exit{
+	border-top: 1px solid white;
+	padding-top: 15px;
+	width: fit-content;
 }
 
 #info {
